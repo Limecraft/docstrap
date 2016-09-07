@@ -18,11 +18,12 @@
 
 	<!-- Mermaid -->
 	<script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.dark.css">
 
 	<script type="text/javascript">
 		$(function() {
-			$(".lang-mermaid code").each(function () {
-				$(this).parent().replaceWith("<div class='mermaid'>" + $(this).text() + "</div>");
+			$(".lang-mermaid, .sunlight-highlight-mermaid").each(function () {
+				$(this).replaceWith("<div class='mermaid'>" + $(this).text() + "</div>");
 			});
 			mermaid.init();
 		});
