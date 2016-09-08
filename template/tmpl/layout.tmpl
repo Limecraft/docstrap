@@ -13,6 +13,21 @@
 
 	<link type="text/css" rel="stylesheet" href="styles/site.<?js= this.navOptions.theme ?>.css">
 
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<!-- Mermaid -->
+	<script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.dark.css">
+
+	<script type="text/javascript">
+		$(function() {
+			$(".lang-mermaid, .sunlight-highlight-mermaid").each(function () {
+				$(this).replaceWith("<div class='mermaid'>" + $(this).text() + "</div>");
+			});
+			mermaid.init();
+		});
+	</script>
 </head>
 
 <body>
